@@ -14,8 +14,10 @@ The main objective is to infer the range of environmental occupation of the huma
 
 # Finding the phylogeny among samples (before running selection analysis with GRoSS)
 To build the phylogeny we are using Treemix software (treemix-1.13). To run this program, an input file with alternative and reference allele counts of each SNP, per population, must be used. SNPs are filtered by invariant sites, linkage disequilibrium (LD) and MAF < 0.05.
-1. First, the filtering of invariant sites and linkage disequilibrium (LD) is performed with bcftools, vcftools and Plink (PLINK 1.9). 'Filter_invsites_LD.sh' script. 
-2. Then, we obtain alternative allele frequencies per population with Plink (PLINK 2.0). 'Allele_freq.sh' script. An output file per population is generated. We upload one as example (allele-freq_chr12.CLM.afreq).
-3. Join data in the same CSV file from all populations: SNPs as raws and populations as columns, filled with only alternative frequency data. 
-4. Filter SNPs by MAF < 0.05 with R. 'Filter_MAF_0.05.R' script. 
+1. Filter the VCF file by invariant sites and linkage disequilibrium (LD), performed with bcftools, vcftools and Plink (PLINK 1.9). 'Filter_invsites_LD.sh' script. 
+2. Obtaining alternative allele frequencies per population with Plink (PLINK 2.0). 'Allele_freq.sh' script. An output file per population is generated. We upload one as example (allele-freq_chr12.CLM.afreq).
+3. Join data from all populations in the same CSV file: SNPs as raws and populations as columns, filled with alternative frequency data and observed counts. 
+4. Filter SNPs by MAF < 0.05 with R. 'Filter_MAF_0.05.R' script. 10045 SNPs remained. 
+5. Calculate with Excel the reference allele frequency (1-alternative allele frequency), alternative allele counts (alternative allele frequency * observed counts) and reference allele counts (reference allele counts * observed counts). 
+6. Create another file: header with a space-delimited list of the names of populations, followed by lines containing the alternative and reference allele counts at each SNP separated by a comma. The final file is uploaded ''
 
