@@ -20,6 +20,7 @@ To build the phylogeny we are using Treemix software (treemix-1.13). To run this
 4. Filter SNPs by MAF < 0.05 with R. 'Filter_MAF_0.05.R' script. 10045 SNPs remained. 
 5. Calculate with Excel the reference allele frequency (1-alternative allele frequency), alternative allele counts (alternative allele frequency * observed counts) and reference allele counts (reference allele counts * observed counts). 
 6. Create another file: header with a space-delimited list of the names of populations, followed by lines containing the alternative and reference allele counts at each SNP separated by a comma. The final file is provided 'input_treemix_chr12_0.05.prn'.
-7. Compress the file 'input_treemix_chr12_0.05.prn' with 'gzip' command (Treemix requires a compressed file as input). 
-8. Run Treemix with 'run_treemix.sh' script. 
+7. Compress the file 'input_treemix_chr12_0.05.prn' with 'gzip' command (Treemix requires a compressed file as input). This file is also provided 'input_treemix_chr12_0.05.prn.gz'.
+8. Run Treemix with 'run_treemix.sh' script. The root of the tree is not specified because there are 3 African populations. For that reason, an unrooted tree is generated. Different outputs are obtained. Among them, 'chr12_0.05.treeout.gz' is the one used for visualization. 
+9. 
 
