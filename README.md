@@ -21,7 +21,8 @@ To build the phylogeny we are using Treemix software (treemix-1.13). To run this
 5. Calculate with Excel the reference allele frequency (1-alternative allele frequency), alternative allele counts (alternative allele frequency * observed counts) and reference allele counts (reference allele counts * observed counts). 
 6. Create another file: header with a space-delimited list of the names of populations, followed by lines containing the alternative and reference allele counts at each SNP separated by a comma. The final file is provided 'input_treemix_chr12_0.05.prn'.
 7. Compress the file 'input_treemix_chr12_0.05.prn' with 'gzip' command (Treemix requires a compressed file as input). This file is also provided 'input_treemix_chr12_0.05.prn.gz'.
-8. Run Treemix with 'run_treemix.sh' script. The root option is not specified because there are 3 African populations. For that reason, an unrooted tree will be generated. Different outputs are obtained. Among them, 'chr12_0.05.treeout.gz' is the one used for visualization. 
+8. Run Treemix with 'run_treemix.sh' script. The root option is not specified because there are 3 African populations. For that reason, an unrooted tree will be generated. Different outputs are obtained. Among them, 'chr12_0.05.treeout.gz' is the one used for visualization. Decompress it with 'gunzip' command. 
 9. Visualization of the tree with 'visualize_tree.R' script. The generated image is 'chr12_0.05.png'. 
-10. Root the tree with 'midpoint_rooting.py' script. 
+10. Script to root the tree using the midpoint rooting method: 'midpoint_rooting.py'. 
+11. To visualize the rooted tree, run in Bash $ python midpoint_rooting.py chr12_0.05.treeout | ete3 view --text 
 
