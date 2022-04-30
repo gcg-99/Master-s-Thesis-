@@ -15,5 +15,5 @@ The main objective is to infer the range of environmental occupation of the huma
 # Finding the phylogeny among samples (before running selection analysis with GRoSS)
 To build the phylogeny we are using Treemix software (treemix-1.13). To run this program, an input file with alternative and reference allele counts of each SNP, per population, must be used. SNPs are filtered by invariant sites, linkage disequilibrium (LD) and MAF < 0.05.
 1. First, the filtering of invariant sites and linkage disequilibrium (LD) is performed with bcftools, vcftools and Plink (PLINK 1.9). 'Filter_invsites_LD.sh' script. 
-2. Then, we obtain alternative allele frequencies per population with Plink (PLINK 2.0). 
+2. Then, we obtain alternative allele frequencies per population with Plink (PLINK 2.0). 'Allele_freq.sh' script. An output file is uploaded as example ()
 
