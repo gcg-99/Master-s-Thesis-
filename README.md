@@ -11,4 +11,7 @@ The main objective is to infer the range of environmental occupation of the huma
 3. Merge metadata with our samples with 'merge_metadata.R' script.
 4. Convert sequence tree to vcf with python3 (tskit). 'trees2vcf.py' script.
 5. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz'.
-6. Delete original vcf with all the samples (in this example 'hgdp_tgp_sgdp_chr12_p.dated.vcf').
+
+# Finding the phylogeny among samples (before running selection analysis with GRoSS)
+To build the phylogeny we are using Treemix software (treemix-1.13). To run Treemix we are using an input file filtered by invariant sites and linkage disequilibrium (LD) with 
+
