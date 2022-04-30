@@ -17,5 +17,5 @@ To build the phylogeny we are using Treemix software (treemix-1.13). To run this
 1. First, the filtering of invariant sites and linkage disequilibrium (LD) is performed with bcftools, vcftools and Plink (PLINK 1.9). 'Filter_invsites_LD.sh' script. 
 2. Then, we obtain alternative allele frequencies per population with Plink (PLINK 2.0). 'Allele_freq.sh' script. An output file per population is generated. We upload one as example (allele-freq_chr12.CLM.afreq).
 3. Join data in the same CSV file from all populations: SNPs as raws and populations as columns, filled with only alternative frequency data. 
-4. Filter SNPs by MAF < 0.05 with R. 'Filter_MAF_0.05.sh' script. 
+4. Filter SNPs by MAF < 0.05 with R. 'Filter_MAF_0.05.R' script. 
 
