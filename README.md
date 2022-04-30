@@ -10,4 +10,5 @@ The main objective is to infer the range of environmental occupation of the huma
 2. Get metadata from 'hgdp_tgp_sgdp_chr12_p.dated.trees' file with python3, tskit and json (and sys to save it) with 'metadata.sh' script.
 3. Merge metadata with our samples with 'merge_metadata.R' script.
 4. Convert sequence tree to vcf with python3 (tskit). 'trees2vcf.py' script.
-5. Filter the VCF file by selected individuals with 'filter_ind.sh' script. 
+5. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 
+6. Delete original vcf with all the samples (in this example 'hgdp_tgp_sgdp_chr12_p.dated.vcf')
