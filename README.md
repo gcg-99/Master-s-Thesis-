@@ -32,5 +32,5 @@ To build the phylogeny we are using Treemix software (treemix-1.13). To run this
 Before the performance of the genotype-environment association analysis, is crucial to previously identify *loci* under positive selection. For that purpose, an outlier test is implemented through the Graph-aware Retrieval of Selective Sweeps software (GRoSS) (Refoyo-Martínez et al. 2019). We are running GRoSS twice. In order to run it, the following files are needed:
 1. An input file with the reference and alternative allele counts per SNP and population, obtained with 'input_gross.sh' script. Falta meter el archivo obtenido y el panel.txt. This input file is the same for the two times that GRoSS is run. 
 2. A graph file. To write this file (by hand) letters must first be assigned to each node of the tree. Afterwards, the labels of the populations must be written, followed by the tree topology, written as the union between node-node or node-population, through the branches that make it up. The two graph files used to run GRoSS (one at a time) are 'chr12_0.05.graph' and (falta meter el otro graph file).
-
+To run GRoSS twice we used the 'GRoSS.sh' script, using the 'GRoSS.R' script provided in https://github.com/FerRacimo/GRoSS. 
 
