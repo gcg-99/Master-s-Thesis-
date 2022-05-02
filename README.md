@@ -24,10 +24,13 @@ To build the phylogeny we are using Treemix software (treemix-1.13). To run this
 8. Run Treemix with 'run_treemix.sh' script. The root option is not specified because there are 3 African populations. For that reason, an unrooted tree will be generated. Different outputs are obtained. Among them, 'chr12_0.05.treeout.gz' is the one used for visualization. Decompress it with 'gunzip' command. 
 9. Visualization of the tree with 'visualize_tree.R' script. The generated image is 'chr12_0.05.png'. 
 10. Script to root the tree using the midpoint rooting method: 'midpoint_rooting.py'. 
-11. To visualize the rooted tree, run in Bash $ python midpoint_rooting.py chr12_0.05.treeout | ete3 view --text 
+11. To visualize the rooted tree, run in Bash $ python midpoint_rooting.py chr12_0.05.treeout | ete3 view --text
+12. In addition, with the help of an expert in Anthropology, another phylogenetic tree topology was configured. This will allow running the outlier test twice and assess how powerful the program is.
+13. In summary, we have two phylogenetic tree topologies: the one obtained through Treemix and the one built with an expert help. 
 
 # Outlier test with GRoSS 
-Before the performance of the genotype-environment association analysis, is crucial to previously identify *loci* under positive selection. For that purpose, it is implemented an outlier test with Graph-aware Retrieval of Selective Sweeps software (GRoSS) (Refoyo-Martínez et al. 2019). In order to run GRoSS, the following files are needed:
-1. An input file with the reference and alternative allele counts per SNP and population, obtained with 'input_gross.sh' script. Falta meter el archivo obtenido y el panel.txt. 
-2. A graph file. To write this file (by hand) letters must first be assigned to each of the nodes of the previously obtained tree. Afterwards, the labels of the populations and the branches that join the populations must be written, following the topology of the tree with the assigned letters. An example is provided: 'chr12_0.05.graph'. 
+Before the performance of the genotype-environment association analysis, is crucial to previously identify *loci* under positive selection. For that purpose, an outlier test is implemented through the Graph-aware Retrieval of Selective Sweeps software (GRoSS) (Refoyo-Martínez et al. 2019). We are running GRoSS twice. In order to run it, the following files are needed:
+1. An input file with the reference and alternative allele counts per SNP and population, obtained with 'input_gross.sh' script. Falta meter el archivo obtenido y el panel.txt. This input file is the same for the two times that GRoSS is run. 
+2. A graph file. To write this file (by hand) letters must first be assigned to each node of the tree. Afterwards, the labels of the populations must be written, followed by the tree topology, written as the union between node-node or node-population, through the branches that make it up. The two graph files used to run GRoSS (one at a time) are 'chr12_0.05.graph' and (falta meter el otro graph file).
+
 
