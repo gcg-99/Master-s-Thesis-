@@ -25,8 +25,10 @@ To build the phylogeny we are using Treemix software (treemix-1.13). To run this
 9. Visualization of the tree with 'visualize_tree.R' script. The generated image is 'chr12_0.05.png'. 
 10. Script to root the tree using the midpoint rooting method: 'midpoint_rooting.py'. 
 11. To visualize the rooted tree, run in Bash $ python midpoint_rooting.py chr12_0.05.treeout | ete3 view --text
-12. In addition, with the help of an expert in Anthropology, another phylogenetic tree topology was configured. This will allow running the outlier test twice and assess how powerful the program is.
-13. In summary, we have two phylogenetic tree topologies: the one obtained through Treemix and the one built with an expert help. 
+
+In addition, with the help of an expert in Anthropology, another phylogenetic tree topology was configured. This will allow running the outlier test twice and assess how powerful the program is. 
+
+In summary, we have two phylogenetic tree topologies: the one obtained through Treemix and the one built with an expert help. 
 
 # Outlier test with GRoSS 
 Before the performance of the genotype-environment association analysis, is crucial to previously identify *loci* under positive selection. For that purpose, an outlier test is implemented through the Graph-aware Retrieval of Selective Sweeps software (GRoSS) (Refoyo-Martínez et al. 2019). We are running GRoSS twice. In order to run it, the following files are needed:
