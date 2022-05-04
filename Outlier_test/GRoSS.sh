@@ -1,8 +1,6 @@
 #!/bin/bash
 
-gross_dir="/media/worky_ant/Seagate_Backup_Plus_Drive/AntropoGeoSNPs/00_input/GRoSS"
-input="$gross_dir/human_chr12.gross"
-output="$gross_dir/output_GRoSS"
+output="Master-s-Thesis-/Outlier_test/Output_GRoSS/"
 
 
 # for Treemix topology
