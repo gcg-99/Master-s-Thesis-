@@ -1,16 +1,18 @@
 # Master-s-Thesis-
-Master's Thesis called "ENVIRONMENTAL ASSOCIATION MODELLING WITH LOCI UNDER SELECTION TO INFER ADAPTIVE THRESHOLDS IN THE HUMAN GENOME" in the basis of a greater project.
+Master's Thesis: "ENVIRONMENTAL ASSOCIATION MODELLING WITH LOCI UNDER SELECTION TO INFER ADAPTIVE THRESHOLDS IN THE HUMAN GENOME" in the basis of a greater project.
 The main objective is to infer the range of environmental occupation of the human species taking into account only its genetic variability. Moreover, we would like to find the optimal genotypes adapted to some particular environmental conditions. For that purpose, we have followed the next steps:
 
 # Selection of samples
 
 
 # Building the database 
-1. We downloaded a dataset with unified, inferred tree sequences built from the 1000 Genomes phase 3, Human Genome Diversity, and Simons Genome Diversity Projects (Wohns et al., 2021) from https://zenodo.org/record/5495535#.Yk1V8jyxVH4 and unzip it with 'tsunzip' command. From the whole genome, only genomic data from chromosome 12 was selected by random to perform the analysis. 'hgdp_tgp_sgdp_chr12_p.dated.trees' file.
-2. Get metadata from 'hgdp_tgp_sgdp_chr12_p.dated.trees' file with python3, tskit and json (and sys to save it) with 'metadata.sh' script.
-3. Merge metadata with our samples with 'merge_metadata.R' script.
-4. Convert sequence tree to vcf with python3 (tskit). 'trees2vcf.py' script.
-5. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
+1. Download a dataset with unified, inferred tree sequences built from the 1000 Genomes phase 3, Human Genome Diversity, and Simons Genome Diversity Projects (Wohns et al., 2021) from https://zenodo.org/record/5495535#.Yk1V8jyxVH4 and unzip it with 'tsunzip' command. From the whole genome, only genomic data from the p arm of chromosome 12 was selected by random to perform the analysis: 'hgdp_tgp_sgdp_chr12_p.dated.trees' file.
+
+In order to know the correspondence between the names of the samples that we previously selected from different databases (HGDP and 1000Genomes) and the names of the samples in this new database (Wohns et al., 2021), it is necessary to follow this steps:
+2. Get metadata from 'hgdp_tgp_sgdp_chr12_p.dated.trees' file with python3, tskit and json (and sys to save it) with 'metadata.sh' script. It will create a TXT ('out.txt') file containing metadata from each sample. This file can be imported in Excel, in a comma-delimited format, to have metadata in columns (one of these fields is 'sample', which corresponds to the ID in HGDP and 1000Genomes databases). The number of the row corresponds to the ID in the new database (Wohns et al., 2021). In this way, the data of interest is the column 'samples' and the number of rows, which is tranferred to other file ('ind_list.csv'), where each sample name of Wohns et al., 2021 database have its exact correspondence sample name of HGDP and 1000Genomes databases. 
+4. Merge metadata with our samples with 'merge_metadata.R' script.
+5. Convert sequence tree to vcf with python3 (tskit). 'trees2vcf.py' script.
+6. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
 
 # Finding the phylogeny among samples (before running outlier test) with Treemix
 To build the phylogeny we are using Treemix software (treemix-1.13). To run this program, an input file with alternative and reference allele counts of each SNP, per population, must be used. SNPs are filtered by invariant sites, linkage disequilibrium (LD) and MAF < 0.05.
