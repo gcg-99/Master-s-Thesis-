@@ -11,9 +11,12 @@ The main objective is to infer the range of environmental occupation of the huma
 In order to know the correspondence of sample ID between the samples that we previously selected from HGDP/ 1000Genomes) and the names of the samples in this new database (Wohns et al., 2021), the following steps are necessary:
 
 2. Get metadata from 'hgdp_tgp_sgdp_chr12_p.dated.trees' file with python3, tskit and json (and sys to save it) with 'metadata.py' script. It will create a TXT ('out.txt') file containing metadata from each sample. This file can be imported in Excel, in a comma-delimited format, to have metadata in columns (one of these fields is 'sample', which corresponds to the ID in HGDP and 1000Genomes databases). The number of the row corresponds to the ID in the new database (Wohns et al., 2021). In this way, the data of interest is the column 'samples' and the number of rows, which is tranferred to other file ('ind_list.csv'), where each sample ID of Wohns et al., 2021 database (with 3754 samples) have its exact correspondence sample ID of HGDP and 1000Genomes databases.
-4. Merge the 'ind_list.csv' and 'samples.csv' files by the 'FINAL' column (i.e. by the HGDP/1000Genomes ID) with 'merge_metadata.R' script. A total of 44 samples are not in the Wohns et al., 2021 database. For that reason, our number of samples descend from 350 to 306. 
-5. Convert sequence trees format to vcf format with python3 (tskit). 'trees2vcf.py' script.
-6. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
+3. Merge the 'ind_list.csv' and 'samples.csv' files by the 'FINAL' column (i.e. by the HGDP/1000Genomes ID) with 'merge_metadata.R' script. A total of 44 samples are not in the Wohns et al., 2021 database. For that reason, our number of samples descend from 350 to 306. 
+4. Convert sequence trees format to vcf format with python3 (tskit). Run in Bash terminal the following:
+
+$ python3 -m tskit vcf hgdp_tgp_sgdp_chr12_p.dated.trees > hgdp_tgp_sgdp_chr12_p.dated.vcf
+
+5. Filter the VCF file by final individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
 
 # Finding the phylogeny among samples (before running outlier test) with Treemix
 To build the phylogeny we are using Treemix software (treemix-1.13). To run this program, an input file with alternative and reference allele counts of each SNP, per population, must be used. SNPs are filtered by invariant sites, linkage disequilibrium (LD) and MAF < 0.05.
