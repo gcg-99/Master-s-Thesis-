@@ -16,7 +16,7 @@ In order to know the correspondence of sample ID between the samples that we pre
 
 $ python3 -m tskit vcf hgdp_tgp_sgdp_chr12_p.dated.trees > hgdp_tgp_sgdp_chr12_p.dated.vcf
 
-5. Filter the VCF file by final individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
+5. Filter final individuals in the VCF file with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
 
 # Finding the phylogeny among samples (before running outlier test) with Treemix
 To build the phylogeny we are using Treemix software (treemix-1.13). To run this program, an input file with alternative and reference allele counts of each SNP, per population, must be used. SNPs are filtered by invariant sites, linkage disequilibrium (LD) and MAF < 0.05.
