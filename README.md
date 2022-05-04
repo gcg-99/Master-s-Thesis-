@@ -10,7 +10,7 @@ The main objective is to infer the range of environmental occupation of the huma
 2. Get metadata from 'hgdp_tgp_sgdp_chr12_p.dated.trees' file with python3, tskit and json (and sys to save it) with 'metadata.sh' script.
 3. Merge metadata with our samples with 'merge_metadata.R' script.
 4. Convert sequence tree to vcf with python3 (tskit). 'trees2vcf.py' script.
-5. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz'.
+5. Filter the VCF file by selected individuals with 'filter_ind.sh' script. Our final VCF is 'hgdp_tgp_sgdp_chr12_p.dated.vcf.gz', with 287 samples.
 
 # Finding the phylogeny among samples (before running outlier test) with Treemix
 To build the phylogeny we are using Treemix software (treemix-1.13). To run this program, an input file with alternative and reference allele counts of each SNP, per population, must be used. SNPs are filtered by invariant sites, linkage disequilibrium (LD) and MAF < 0.05.
