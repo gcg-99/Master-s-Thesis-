@@ -1,4 +1,5 @@
-Master's Thesis: **ENVIRONMENTAL ASSOCIATION MODELLING WITH LOCI UNDER SELECTION TO INFER ADAPTIVE THRESHOLDS IN THE HUMAN GENOME** in the basis of a greater project.
+# Master's Thesis
+**ENVIRONMENTAL ASSOCIATION MODELLING WITH LOCI UNDER SELECTION TO INFER ADAPTIVE THRESHOLDS IN THE HUMAN GENOME** in the basis of a greater project.
 The main objective is to infer the range of environmental occupation of the human species taking into account only its genetic variability. Moreover, we would like to find the optimal genotypes adapted to some particular environmental conditions. For that purpose, we have followed the next steps:
 
 # Selection of samples
@@ -7,7 +8,7 @@ The main objective is to infer the range of environmental occupation of the huma
 # Building the database 
 1. Download a dataset with unified, inferred tree sequences built from the 1000 Genomes phase 3, Human Genome Diversity, and Simons Genome Diversity Projects (Wohns et al., 2021) from https://zenodo.org/record/5495535#.Yk1V8jyxVH4 and unzip it with *tsunzip* command. From the whole genome, only genomic data from the p arm of chromosome 12 was selected by random to perform the analysis: *hgdp_tgp_sgdp_chr12_p.dated.trees* file.
 
-In order to know the correspondence of sample ID between the samples that we previously selected from HGDP/ 1000Genomes databases and the names of the samples in this new database (Wohns et al., 2021), the following steps are necessary:
+In order to know the correspondence of sample ID between those that were previously selected from HGDP/ 1000Genomes databases and those contained in this new database (Wohns et al., 2021), the following steps are necessary:
 
 2. Get metadata from *hgdp_tgp_sgdp_chr12_p.dated.trees* file with python3, tskit and json (and sys to save it) with *metadata.py* script. It will create a TXT (*out.txt*) file containing metadata from each sample (3754 samples in total). This file can be imported in Excel, in a comma-delimited format, to have metadata in columns (one of these fields is *'sample'*, which corresponds to the ID in HGDP/1000Genomes databases). The number of the row corresponds to the ID in the new database (Wohns et al., 2021). In this way, the data of interest is the column of *'samples'* and the number of rows, which is tranferred to other file (*ind_list.csv*), where each sample ID of Wohns et al., 2021 database have its exact correspondence sample ID of HGDP/1000Genomes databases.
 
