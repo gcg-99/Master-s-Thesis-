@@ -7,7 +7,7 @@ The main objective is to infer the range of environmental occupation of the huma
 'samples.csv' file, 350 samples. 
 
 # Building the database 
-1. Download a dataset with unified, inferred tree sequences built from the 1000 Genomes phase 3, Human Genome Diversity, and Simons Genome Diversity Projects (Wohns et al., 2022) from https://zenodo.org/record/5495535#.Yk1V8jyxVH4 and unzip it with *tsunzip* command. From the whole genome, only genomic data from the p arm of chromosome 12 was selected by random to perform the analysis: *hgdp_tgp_sgdp_chr12_p.dated.trees* file.
+1. Download a dataset with unified, inferred tree sequences built from the 1000 Genomes phase 3, Human Genome Diversity, and Simons Genome Diversity Projects (Wohns et al., 2022) from https://zenodo.org/record/5495535#.Yk1V8jyxVH4 and unzip it with *tsunzip* command. From the whole genome, only genomic data from the p arm of chromosome 12 was selected arbitrarily to perform the analysis: *hgdp_tgp_sgdp_chr12_p.dated.trees* file.
 
 In order to know the correspondence of sample ID between those that were previously selected from HGDP/ 1000Genomes databases and those contained in this new database (Wohns et al., 2021), the following steps are necessary:
 
