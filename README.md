@@ -1,5 +1,6 @@
 # Master's Thesis
 **ENVIRONMENTAL ASSOCIATION MODELLING WITH LOCI UNDER SELECTION TO INFER ADAPTIVE THRESHOLDS IN THE HUMAN GENOME** 
+
 This Master's Thesis is made in the basis of a greater project.
 The main objective is to infer the range of environmental occupation of the human species taking into account only its genetic adaptability mechanisms. Moreover, we would like to find the optimal genotypes adapted to some particular environmental conditions. For that purpose, we have followed the next steps:
 
