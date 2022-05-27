@@ -50,4 +50,4 @@ edge	o_IBS	o	IBS
 edge	n_p	n	p
 edge	p_PTH	p	PTH
 edge	p_MZB	p	MZB
-edge	j_RUS	n	RUS
+edge	j_RUS	j	RUS
